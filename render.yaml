@@ -1,0 +1,21 @@
+# Render Blueprint — Sitio personal de Julián Chaparro
+# Sitio 100% estático (HTML/CSS/JS, sin backend, sin build).
+# Para enlazarlo en Render: New + → Blueprint → conectar el repositorio
+# julianchapel839-png/julian-chaparro. Render leerá este archivo y creará el servicio.
+services:
+  - type: web
+    name: julian-chaparro
+    runtime: static
+    buildCommand: "echo 'Sitio estatico: sin paso de compilacion'"
+    staticPublishPath: .
+    autoDeploy: true
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer

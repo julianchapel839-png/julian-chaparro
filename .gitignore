@@ -1,0 +1,5 @@
+# Ruido del sistema
+.DS_Store
+
+# Configuración local de herramientas (no se publica)
+.claude/

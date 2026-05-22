@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Activa las animaciones de entrada solo si hay JS (evita ocultar contenido sin JS) -->
+  <script>document.documentElement.classList.add("js");</script>
+  <title>Julián Chaparro — Abogado &amp; Legaltech | Derecho y tecnología en la misma mano</title>
+  <meta name="description" content="Julián Chaparro: abogado y desarrollador legaltech en Bogotá. Software jurídico verificable, automatización de procesos y asesoría legal para firmas, empresas y personas." />
+  <meta name="author" content="Julián Ernesto Chaparro Pinzón" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Julián Chaparro — Abogado &amp; Legaltech" />
+  <meta property="og:description" content="Construyo las herramientas que el derecho necesita. Software jurídico verificable y automatización de procesos." />
+  <meta property="og:locale" content="es_CO" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230C1A2E'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23C9A24B' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="brand" aria-label="Inicio — Julián Chaparro">
+        <span class="brand__mark">JC</span>
+        <span class="brand__text">
+          <span class="brand__name">Julián Chaparro</span>
+          <span class="brand__role">Abogado · Legaltech</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#principios">Principios</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto" class="btn btn--small btn--gold">Hablemos</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+      <p class="eyebrow reveal">Derecho <span class="eyebrow__plus">+</span> Tecnología</p>
+
+      <h1 class="hero__title reveal">
+        Construyo las herramientas<br />
+        que el <span class="accent">derecho</span> necesita.
+      </h1>
+
+      <p class="hero__lead reveal">
+        Soy <strong>Julián Chaparro</strong>, abogado y desarrollador <em>legaltech</em>.
+        Diseño software jurídico verificable y automatizo procesos para que el
+        <span class="hl">criterio profesional —no la máquina—</span> tenga la última palabra.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a href="#proyectos" class="btn btn--gold">Ver mis proyectos</a>
+        <a href="#contacto" class="btn btn--ghost">Trabajemos juntos</a>
+      </div>
+
+      <ul class="hero__creds reveal" aria-label="Credenciales">
+        <li>Examen de Estado aprobado</li>
+        <li>Universidad Santo Tomás</li>
+        <li>Python &amp; Legaltech</li>
+        <li>Bogotá, Colombia</li>
+      </ul>
+    </div>
+
+    <a href="#sobre-mi" class="hero__scroll" aria-label="Bajar">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ SOBRE MÍ ============ -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 class="section__title">Dos mundos, una sola mano</h2>
+        <p class="section__sub">
+          La mayoría de los problemas legales hoy no son solo de derecho ni solo de tecnología:
+          viven en el cruce. Ahí es donde trabajo.
+        </p>
+      </div>
+
+      <div class="about">
+        <div class="about__bridge reveal">
+          <div class="bridge__side">
+            <span class="bridge__icon" aria-hidden="true">§</span>
+            <h3>El abogado</h3>
+            <p>
+              Egresado de Derecho de la Universidad Santo Tomás, con Examen de Estado
+              aprobado ante el Consejo Superior de la Judicatura. Un año de práctica como
+              monitor litigante en el Consultorio Jurídico, con énfasis en
+              <strong>derecho laboral, seguridad social y civil</strong>: redacción de
+              demandas, tutelas, derechos de petición y conceptos.
+            </p>
+          </div>
+
+          <div class="bridge__link" aria-hidden="true">
+            <span class="bridge__dot"></span>
+            <span class="bridge__line"></span>
+            <span class="bridge__dot bridge__dot--gold"></span>
+          </div>
+
+          <div class="bridge__side">
+            <span class="bridge__icon bridge__icon--mono" aria-hidden="true">&lt;/&gt;</span>
+            <h3>El constructor</h3>
+            <p>
+              Desarrollador <em>legaltech</em> con Python y stack web moderno. Construyo
+              suites de defensa, motores de reglas, generación documental, OCR de
+              expedientes y sistemas de gestión.
+              <strong>Software real, en producción</strong>, resolviendo problemas reales.
+            </p>
+          </div>
+        </div>
+
+        <blockquote class="about__quote reveal">
+          “No vine a reemplazar al abogado. Vine a darle mejores instrumentos para pensar.”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRINCIPIOS ============ -->
+  <section class="section section--alt" id="principios">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Cómo trabajo</h2>
+        <p class="section__sub">
+          Cuatro principios que atraviesan todo lo que construyo. No son eslóganes:
+          están escritos en el código de cada proyecto.
+        </p>
+      </div>
+
+      <div class="grid grid--4">
+        <article class="principle reveal">
+          <span class="principle__num">I</span>
+          <h3>El humano decide</h3>
+          <p>La herramienta propone las piezas; el criterio profesional firma. Nada con consecuencia jurídica se delega a una máquina.</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle__num">II</span>
+          <h3>Verificable y trazable</h3>
+          <p>Sin caja negra. Cada norma, cada cita y cada cálculo se puede auditar y rastrear hasta su fuente.</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle__num">III</span>
+          <h3>Privacidad primero</h3>
+          <p>La información sensible queda bajo control de quien la maneja. Diseño coherente con el Habeas Data (Ley 1581 de 2012).</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle__num">IV</span>
+          <h3>Eficiencia con criterio</h3>
+          <p>Quito el trabajo mecánico —buscar, transcribir, repetir— para devolver tiempo al trabajo que de verdad importa: el estratégico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 class="section__title">En qué puedo ayudarte</h2>
+        <p class="section__sub">
+          Cuatro líneas de trabajo, una misma forma de hacer las cosas. Cada una respaldada
+          por un proyecto real que puedes ver más abajo.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="service reveal">
+          <div class="service__top">
+            <span class="service__icon" aria-hidden="true">⚖</span>
+            <h3>Asesoría jurídica &amp; litigio</h3>
+          </div>
+          <p>
+            Acompañamiento en derecho laboral, seguridad social, civil, disciplinario y fiscal.
+            Redacción forense de demandas, tutelas, derechos de petición y conceptos, con
+            fundamento normativo y jurisprudencial sólido.
+          </p>
+          <p class="service__for"><span>Para:</span> personas, trabajadores y empresas.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service__top">
+            <span class="service__icon" aria-hidden="true">▦</span>
+            <h3>Legaltech a la medida</h3>
+          </div>
+          <p>
+            Software jurídico para firmas y áreas legales: suites de construcción documental,
+            bancos de norma y jurisprudencia curada, calculadoras legales y flujos de defensa
+            técnica. La tecnología adaptada a cómo trabaja tu firma.
+          </p>
+          <p class="service__for"><span>Para:</span> firmas de abogados y departamentos jurídicos.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service__top">
+            <span class="service__icon" aria-hidden="true">⟳</span>
+            <h3>Automatización de procesos</h3>
+          </div>
+          <p>
+            Python aplicado al trabajo real: generación masiva de documentos (DOCX/PDF),
+            lectura de expedientes con OCR, motores de reglas y verificación. Menos tareas
+            repetitivas, con control humano en cada paso.
+          </p>
+          <p class="service__for"><span>Para:</span> empresas, relaciones laborales y BPO.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service__top">
+            <span class="service__icon" aria-hidden="true">◧</span>
+            <h3>Sistemas de gestión &amp; SaaS</h3>
+          </div>
+          <p>
+            Plataformas operativas a la medida de tu negocio: agenda y multi-sede, control
+            financiero, facturación, marca configurable (white-label) y cumplimiento de
+            datos personales. El sistema operativo de tu operación.
+          </p>
+          <p class="service__for"><span>Para:</span> negocios, estudios y emprendimientos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROYECTOS ============ -->
+  <section class="section section--alt" id="proyectos">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Proyectos que lo demuestran</h2>
+        <p class="section__sub">
+          No son ideas: son productos construidos. Esto es la prueba de cada servicio.
+        </p>
+      </div>
+
+      <div class="projects">
+        <!-- ATALAYA -->
+        <article class="project reveal" data-accent="atalaya">
+          <div class="project__bar"></div>
+          <div class="project__body">
+            <header class="project__head">
+              <div>
+                <h3 class="project__name">ATALAYA</h3>
+                <p class="project__tag">Suite estratégica para el abogado laboralista</p>
+              </div>
+              <span class="badge badge--proto">Prototipo navegable</span>
+            </header>
+            <p class="project__desc">
+              «Tu posición estratégica en el derecho laboral.» Una herramienta que reúne norma
+              vigente, líneas jurisprudenciales, doctrina y calculadoras para que el abogado
+              construya —pieza por pieza— su documentación, sin perderse en la búsqueda.
+            </p>
+            <ul class="project__meta">
+              <li>Next.js · TypeScript</li>
+              <li>Norma + jurisprudencia curada</li>
+              <li>Calculadoras laborales</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- EGIDA -->
+        <article class="project reveal" data-accent="egida">
+          <div class="project__bar"></div>
+          <div class="project__body">
+            <header class="project__head">
+              <div>
+                <h3 class="project__name">ÉGIDA</h3>
+                <p class="project__tag">Suite de defensa asistida — fiscal &amp; disciplinario</p>
+              </div>
+              <span class="badge badge--demo">Demostrable hoy</span>
+            </header>
+            <p class="project__desc">
+              «El abogado decide; ÉGIDA propone las piezas.» Un acelerador de defensa técnica
+              para procesos fiscales (Ley 610/2000) y disciplinarios (Ley 1952/2019). Convierte
+              la página en blanco en un borrador estructurado, fundado y trazable —100% en el
+              navegador, sin que los datos salgan del equipo.
+            </p>
+            <ul class="project__meta">
+              <li>8 escritos insignia</li>
+              <li>Banco de fuentes verificadas</li>
+              <li>Calculadora de términos</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- NÚCLEO -->
+        <article class="project reveal" data-accent="nucleo">
+          <div class="project__bar"></div>
+          <div class="project__body">
+            <header class="project__head">
+              <div>
+                <h3 class="project__name">NÚCLEO</h3>
+                <p class="project__tag">Sistema operativo para estudios de Pilates</p>
+              </div>
+              <span class="badge badge--proto">MVP funcional</span>
+            </header>
+            <p class="project__desc">
+              Gestión integral multi-sede: cronograma gráfico, reservas y lista de espera,
+              bonos con vigencia, check-in atómico y panel financiero que distingue caja de
+              ingreso devengado. Marca configurable (white-label) y ficha de salud con
+              consentimiento de datos.
+            </p>
+            <ul class="project__meta">
+              <li>Next.js · Prisma</li>
+              <li>White-label</li>
+              <li>Control financiero</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- AMÉRICAS BPS -->
+        <article class="project reveal" data-accent="abps">
+          <div class="project__bar"></div>
+          <div class="project__body">
+            <header class="project__head">
+              <div>
+                <h3 class="project__name">Américas BPS</h3>
+                <p class="project__tag">Sistema de gestión disciplinaria — empresarial</p>
+              </div>
+              <span class="badge badge--prod">En producción</span>
+            </header>
+            <p class="project__desc">
+              Aplicación corporativa que automatiza la gestión disciplinaria de una compañía:
+              lee actas con OCR, detecta conductas con un motor de reglas y genera decisiones
+              en DOCX y PDF con respaldo normativo. Diseñada con control humano y cumplimiento
+              de Habeas Data desde el primer día.
+            </p>
+            <ul class="project__meta">
+              <li>Python · Flask</li>
+              <li>OCR + motor de reglas</li>
+              <li>Web y escritorio</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARA QUIÉN ============ -->
+  <section class="section" id="para-quien">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">05</span>
+        <h2 class="section__title">Para quién trabajo</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="audience reveal">
+          <h3>Firmas y abogados</h3>
+          <p>Herramientas que les devuelven horas de búsqueda y elevan el estándar técnico de cada escrito, sin perder su sello.</p>
+        </article>
+        <article class="audience reveal">
+          <h3>Empresas y compañías</h3>
+          <p>Automatización de procesos legales y operativos, con trazabilidad, cumplimiento y control humano en cada decisión.</p>
+        </article>
+        <article class="audience reveal">
+          <h3>Público en general</h3>
+          <p>Asesoría jurídica clara y cercana en derecho laboral, seguridad social y civil, para entender y defender tus derechos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORMACIÓN ============ -->
+  <section class="section section--alt" id="formacion">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">06</span>
+        <h2 class="section__title">Formación &amp; trayectoria</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__year">2025</span>
+          <div class="timeline__content">
+            <h3>Examen de Estado para Abogados — aprobado</h3>
+            <p>Consejo Superior de la Judicatura. Resultados publicados en diciembre de 2025; licencia temporal vigente.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__year">2025</span>
+          <div class="timeline__content">
+            <h3>Monitor litigante — Consultorio Jurídico USTA</h3>
+            <p>Un año de práctica con énfasis en derecho laboral, seguridad social y civil. Gestión de litigios, defensa técnica y análisis normativo.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__year">2025</span>
+          <div class="timeline__content">
+            <h3>Diplomado en Contratos en el Derecho Privado</h3>
+            <p>90 horas — Universidad Santo Tomás. Sumado a actualización en Derecho Laboral y Seguridad Social (2024).</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__year">2020–2024</span>
+          <div class="timeline__content">
+            <h3>Derecho — Universidad Santo Tomás</h3>
+            <p>Sede principal Bogotá. Plan de estudios culminado (168 créditos); grado programado para 2026.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="skills reveal">
+        <h3 class="skills__title">Herramientas &amp; conocimientos</h3>
+        <ul class="skills__list">
+          <li>Python</li>
+          <li>Automatización documental</li>
+          <li>OCR &amp; motores de reglas</li>
+          <li>Next.js · TypeScript</li>
+          <li>Redacción forense</li>
+          <li>Investigación jurisprudencial</li>
+          <li>Habeas Data</li>
+          <li>Tyba · Samai</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section contact" id="contacto">
+    <div class="container">
+      <div class="contact__inner reveal">
+        <p class="eyebrow">Hablemos</p>
+        <h2 class="contact__title">¿Tienes un problema legal o un proceso que automatizar?</h2>
+        <p class="contact__lead">
+          Cuéntame qué necesitas. Te respondo personalmente y vemos si puedo ayudarte —sea
+          una asesoría, una herramienta a la medida o un sistema completo.
+        </p>
+
+        <div class="contact__actions">
+          <a class="btn btn--gold" href="mailto:julianchapel839@gmail.com?subject=Quiero%20trabajar%20contigo&amp;body=Hola%20Juli%C3%A1n%2C%20te%20escribo%20porque...">
+            Escríbeme un correo
+          </a>
+          <a class="btn btn--ghost" href="https://wa.me/573185493078?text=Hola%20Juli%C3%A1n%2C%20vi%20tu%20sitio%20y%20quiero..." target="_blank" rel="noopener">
+            Escríbeme por WhatsApp
+          </a>
+        </div>
+
+        <ul class="contact__details">
+          <li>
+            <span class="contact__label">Correo</span>
+            <a href="mailto:julianchapel839@gmail.com">julianchapel839@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact__label">Teléfono</span>
+            <a href="tel:+573185493078">+57 318 549 3078</a>
+          </li>
+          <li>
+            <span class="contact__label">Ubicación</span>
+            <span>Bogotá D.C., Colombia</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">JC</span>
+        <div>
+          <p class="footer__name">Julián Ernesto Chaparro Pinzón</p>
+          <p class="footer__role">Abogado · Legaltech · Automatización de procesos</p>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Navegación de pie de página">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> Julián Chaparro · Derecho y tecnología en la misma mano.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
