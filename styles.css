@@ -425,6 +425,28 @@ h1, h2, h3 { font-family: var(--ff-serif); font-weight: 600; line-height: 1.12; 
   padding: 5px 11px;
   border-radius: 999px;
 }
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-top: 22px;
+  font-family: var(--ff-sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--acc);
+  padding: 10px 20px;
+  border: 1px solid color-mix(in srgb, var(--acc) 45%, transparent);
+  border-radius: 999px;
+  transition: background .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.project__link span { transition: transform .3s var(--ease); }
+.project__link:hover {
+  background: color-mix(in srgb, var(--acc) 14%, transparent);
+  border-color: var(--acc);
+  transform: translateY(-2px);
+}
+.project__link:hover span { transform: translate(3px, -3px); }
+.project__link:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; }
 
 .badge {
   flex-shrink: 0;
