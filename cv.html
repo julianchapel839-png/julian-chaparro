@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV — Julián Ernesto Chaparro Pinzón</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0c1a2e;
+      --navy-2: #1a2942;
+      --gold: #b8893a;
+      --gold-2: #c9a24b;
+      --cream: #f7f3ec;
+      --ink: #1a1d24;
+      --muted: #5a6779;
+      --rule: #d6cab5;
+    }
+    @page { size: Letter; margin: 0.4in 0.55in; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: #fff;
+      color: var(--ink);
+      font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+      font-size: 10pt;
+      line-height: 1.45;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .cv { padding: 0; }
+
+    /* Header */
+    .head { border-bottom: 2px solid var(--navy); padding-bottom: 11px; margin-bottom: 14px; }
+    .eyebrow {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8pt;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .name {
+      font-family: "Spectral", Georgia, serif;
+      font-size: 26pt;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.015em;
+      line-height: 1.05;
+      margin: 6px 0 4px;
+    }
+    .tagline {
+      font-family: "Spectral", Georgia, serif;
+      font-style: italic;
+      font-size: 11pt;
+      color: var(--muted);
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 12px;
+      font-size: 9pt;
+      color: var(--ink);
+    }
+    .contact span { display: inline-flex; align-items: center; gap: 6px; }
+    .contact .mark { color: var(--gold); font-weight: 700; font-family: "JetBrains Mono", monospace; }
+
+    /* Sections */
+    .section { margin-bottom: 9px; }
+    .section__title {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8.5pt;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 9px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .profile { font-size: 9.5pt; line-height: 1.5; }
+    .profile strong { color: var(--navy); font-weight: 600; }
+
+    /* Entries */
+    .entry { margin-bottom: 7px; }
+    .entry__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .entry__role {
+      font-family: "Spectral", Georgia, serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .entry__date {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8pt;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .entry__org {
+      font-size: 9pt;
+      color: var(--muted);
+      margin: 2px 0 4px;
+    }
+    .entry__desc { font-size: 9pt; line-height: 1.42; }
+    .entry__desc strong { color: var(--navy); font-weight: 600; }
+
+    /* Projects grid */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+    }
+    .proj { font-size: 9pt; line-height: 1.45; }
+    .proj__name {
+      font-family: "Spectral", Georgia, serif;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .proj__desc { color: var(--muted); }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 5px 7px; }
+    .skill {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8pt;
+      color: var(--navy);
+      border: 1px solid var(--rule);
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    /* Footer */
+    .foot {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px solid var(--rule);
+      font-size: 7.5pt;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv">
+    <header class="head">
+      <p class="eyebrow">Abogado · Legaltech · Automatización de procesos</p>
+      <h1 class="name">Julián Ernesto Chaparro Pinzón</h1>
+      <p class="tagline">Derecho y tecnología en la misma mano.</p>
+      <div class="contact">
+        <span><span class="mark">@</span> julianchapel839@gmail.com</span>
+        <span><span class="mark">☎</span> +57 318 549 3078</span>
+        <span><span class="mark">◉</span> Bogotá D.C., Colombia</span>
+        <span><span class="mark">↗</span> julian-chaparro.onrender.com</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section__title">Perfil</h2>
+      <p class="profile">
+        Abogado egresado de la <strong>Universidad Santo Tomás</strong> (Bogotá), con <strong>Examen de Estado aprobado</strong> ante el Consejo Superior de la Judicatura. Combino formación jurídica con desarrollo de software (Python y stack web moderno) para construir herramientas verificables que potencian la práctica del derecho, sin reemplazar el criterio profesional. Énfasis en derecho laboral, seguridad social, civil, disciplinario y fiscal.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Experiencia</h2>
+
+      <div class="entry">
+        <div class="entry__head">
+          <span class="entry__role">Analista de Relaciones Laborales</span>
+          <span class="entry__date">2026</span>
+        </div>
+        <p class="entry__org">Américas BPS · Bogotá</p>
+        <p class="entry__desc">
+          <strong>Creador y desarrollador</strong> del Sistema de Gestión Disciplinaria de la empresa: lectura de actas con OCR, motor de reglas para tipificar conductas (Ley 1952/2019) y generación de decisiones en Word y PDF con respaldo normativo. <strong>Usado y validado por la compañía</strong> en su funcionamiento.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry__head">
+          <span class="entry__role">Monitor Litigante — Consultorio Jurídico</span>
+          <span class="entry__date">2025 – 2026</span>
+        </div>
+        <p class="entry__org">Universidad Santo Tomás · Bogotá</p>
+        <p class="entry__desc">
+          Soporte legal transversal con énfasis en <strong>derecho laboral, seguridad social y civil</strong>. Redacción autónoma de demandas, tutelas, derechos de petición y conceptos jurídicos. Análisis normativo y jurisprudencial para fundamentar estrategias de defensa.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Formación</h2>
+
+      <div class="entry">
+        <div class="entry__head">
+          <span class="entry__role">Derecho</span>
+          <span class="entry__date">2020 – 2024</span>
+        </div>
+        <p class="entry__org">Universidad Santo Tomás · Sede principal Bogotá</p>
+        <p class="entry__desc">
+          Plan de estudios culminado (168 créditos · 77 asignaturas). <strong>Examen de Estado aprobado</strong> por el Consejo Superior de la Judicatura (diciembre 2025); licencia temporal vigente.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry__head">
+          <span class="entry__role">Formación complementaria</span>
+          <span class="entry__date">2023 – 2025</span>
+        </div>
+        <p class="entry__desc">
+          Diplomado en Contratos en el Derecho Privado (90 h · USTA, 2025). Curso de actualización en Derecho Laboral y Seguridad Social (40 h · USTA, 2024). Congreso Internacional de Enfoques Criminológicos y Penitenciarios (USTA &amp; RELAPT, 2023).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Proyectos destacados</h2>
+      <div class="projects">
+        <p class="proj"><span class="proj__name">ATALAYA</span> <span class="proj__desc">— suite estratégica para el abogado laboralista.</span></p>
+        <p class="proj"><span class="proj__name">ÉGIDA</span> <span class="proj__desc">— defensa asistida en procesos fiscales y disciplinarios. egida.onrender.com</span></p>
+        <p class="proj"><span class="proj__name">JustiDocs</span> <span class="proj__desc">— suite procesal/financiera para juzgados (41 plantillas judiciales).</span></p>
+        <p class="proj"><span class="proj__name">NÚCLEO</span> <span class="proj__desc">— sistema operativo multi-sede para estudios de Pilates.</span></p>
+        <p class="proj"><span class="proj__name">Sistema Disciplinario · Américas BPS</span> <span class="proj__desc">— validado por la empresa.</span></p>
+        <p class="proj"><span class="proj__name">Laboraleando</span> <span class="proj__desc">— divulgación del derecho laboral en cuentos. laboraleando-web.vercel.app</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Habilidades</h2>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">Next.js · TypeScript</span>
+        <span class="skill">Automatización documental</span>
+        <span class="skill">OCR · motores de reglas</span>
+        <span class="skill">Redacción forense</span>
+        <span class="skill">Investigación jurisprudencial</span>
+        <span class="skill">Habeas Data</span>
+        <span class="skill">Tyba · Samai</span>
+      </div>
+    </section>
+
+    <footer class="foot">
+      julian-chaparro.onrender.com  ·  Actualizado en 2026
+    </footer>
+  </div>
+</body>
+</html>
