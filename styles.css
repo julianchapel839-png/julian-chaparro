@@ -524,7 +524,7 @@ h1, h2, h3 { font-family: var(--ff-serif); font-weight: 600; line-height: 1.12; 
 /* ----------------- Timeline ----------------- */
 .timeline { position: relative; max-width: 760px; margin-bottom: 60px; padding-left: 30px; }
 .timeline::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(180deg, var(--gold), var(--line-soft)); }
-.timeline__item { position: relative; display: grid; grid-template-columns: 176px 1fr; gap: 24px; padding: 22px 0; }
+.timeline__item { position: relative; display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 22px 0; }
 .timeline__item::before {
   content: ""; position: absolute; left: -30px; top: 30px;
   width: 12px; height: 12px; border-radius: 50%;
