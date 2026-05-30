@@ -32,6 +32,7 @@
   --acc-abps:    #5a9be0;
   --acc-laboraleando: #e0876a;
   --acc-justidocs: #a78bda;
+  --acc-super:    #7d8db5;
 
   --maxw: 1180px;
   --radius: 18px;
@@ -411,6 +412,7 @@ h1, h2, h3 { font-family: var(--ff-serif); font-weight: 600; line-height: 1.12; 
 .project[data-accent="nucleo"]  { --acc: var(--acc-nucleo); }
 .project[data-accent="abps"]    { --acc: var(--acc-abps); }
 .project[data-accent="justidocs"] { --acc: var(--acc-justidocs); }
+.project[data-accent="super"]   { --acc: var(--acc-super); }
 .project:hover { border-color: color-mix(in srgb, var(--acc) 40%, transparent); }
 /* Cuando hay 5 tarjetas en la grilla de 2 columnas, centrar la huérfana */
 @media (min-width: 861px) {
