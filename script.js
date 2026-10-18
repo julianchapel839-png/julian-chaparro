@@ -5,35 +5,47 @@
   "use strict";
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   /* ---------- Año del footer ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------- Nav: estado al hacer scroll ---------- */
+  /* ---------- Nav y barra de progreso al hacer scroll ---------- */
   const nav = document.getElementById("nav");
+  const bar = document.getElementById("progressBar");
+  let ticking = false;
   const onScroll = () => {
-    if (window.scrollY > 24) nav.classList.add("is-scrolled");
-    else nav.classList.remove("is-scrolled");
+    ticking = false;
+    const y = window.scrollY;
+    nav.classList.toggle("is-scrolled", y > 24);
+    if (bar) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? Math.min(y / max, 1) : 0})`;
+    }
   };
   onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("scroll", () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
 
   /* ---------- Nav móvil ---------- */
   const toggle = document.getElementById("navToggle");
   const links = document.getElementById("navLinks");
-  const closeMenu = () => {
-    toggle.classList.remove("is-open");
-    links.classList.remove("is-open");
-    toggle.setAttribute("aria-expanded", "false");
-  };
-  toggle.addEventListener("click", () => {
-    const open = links.classList.toggle("is-open");
+  const setMenu = (open) => {
+    links.classList.toggle("is-open", open);
     toggle.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  };
+  toggle.addEventListener("click", () => setMenu(!links.classList.contains("is-open")));
+  links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && links.classList.contains("is-open")) { setMenu(false); toggle.focus(); }
   });
-  links.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
+  document.addEventListener("click", (e) => {
+    if (links.classList.contains("is-open") && !links.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
+  });
 
   /* ---------- Reveal al entrar en viewport ---------- */
   const revealEls = document.querySelectorAll(".reveal");
@@ -51,9 +63,9 @@
       },
       { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
     );
-    revealEls.forEach((el, i) => {
+    revealEls.forEach((el) => {
       // Escalona los hijos de un mismo grupo
-      const parent = el.closest(".grid, .projects, .timeline, .hero__inner, .about__bridge");
+      const parent = el.closest(".grid, .projects, .cases, .timeline, .hero__grid, .about__bridge");
       if (parent) {
         const siblings = Array.from(parent.querySelectorAll(".reveal"));
         el.style.transitionDelay = Math.min(siblings.indexOf(el), 6) * 80 + "ms";
@@ -68,6 +80,17 @@
           el.classList.add("is-visible");
           io.unobserve(el);
         }
+      });
+    });
+  }
+
+  /* ---------- Luz que sigue al cursor sobre las tarjetas ---------- */
+  if (finePointer && !prefersReduced) {
+    document.querySelectorAll(".spot").forEach((card) => {
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        card.style.setProperty("--my", `${e.clientY - r.top}px`);
       });
     });
   }
@@ -168,6 +191,11 @@
     const spyIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          // De vuelta en la portada: ningún enlace queda activo
+          if (entry.target.id === "inicio" && entry.isIntersecting) {
+            navAnchors.forEach((x) => x.classList.remove("is-active"));
+            return;
+          }
           const a = map[entry.target.id];
           if (!a) return;
           if (entry.isIntersecting) {
